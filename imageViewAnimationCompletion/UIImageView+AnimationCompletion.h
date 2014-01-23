@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIImageView+AnimationCompletion.h
 //  imageViewAnimationCompletion
 //
 //  Created by Gurpreet Singh on 22/01/14.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *animatedImageView;
-- (IBAction)StartAnimation:(id)sender;
-
+typedef void (^Block)(BOOL success);
+@interface UIImageView (AnimationCompletion)
+-(void)startAnimatingWithCompletionBlock:(Block)block;
 @end

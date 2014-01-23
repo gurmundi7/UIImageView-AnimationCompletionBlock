@@ -73,6 +73,5 @@ NSArray* getCGImagesArray(NSArray* UIImagesArray)
 {
    Block block_ = [self block];
     if (block_)block_(flag);
-    NSLog(@"animationDidStop");
 }
 @end

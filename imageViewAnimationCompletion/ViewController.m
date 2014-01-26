@@ -38,8 +38,12 @@
 
 - (IBAction)StartAnimation:(id)sender {
     [(UIButton*)sender setEnabled:NO];
+    [(UIButton*)sender setTitle:@"Your Block Will Run On Completion" forState:UIControlStateNormal];
+    
     [self.animatedImageView startAnimatingWithCompletionBlock:^(BOOL success){
-         NSLog(@"End %@",[NSNumber numberWithBool:success]);
+         NSLog(@"Completed %@",[NSNumber numberWithBool:success]);
+        
+        [(UIButton*)sender setTitle:@"Animation Completed. Start Again" forState:UIControlStateNormal];
          [(UIButton*)sender setEnabled:YES];
          [(UIButton*)sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [(UIButton*)sender setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];

@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "UIImageView-AnimationCompletionBlock"
+  s.name         = "UIImageView+AnimationCompletionBlock"
   s.version      = "1.0.0"
   s.summary      = "Category on UIImageView that provides an alternative to startAnimation that allows a completion block."
   s.homepage     = "https://github.com/gurmundi7/UIImageView-AnimationCompletionBlock"
